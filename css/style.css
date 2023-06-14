@@ -1,0 +1,245 @@
+@font-face {
+  font-family: "Neue Machina Light";
+  src: local("Neue Machina Light"), local("Neue-Machina-Light"),
+    url(../fonts/NeueMachina-Light.woff2) format("woff2"),
+    url(../fonts/NeueMachina-Light.woff) format("woff"),
+    url(../fonts/NeueMachina-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Machina Regular";
+  src: local("Neue Machina Regular"), local("Neue-Machina-Regular"),
+    url(../fonts/NeueMachina-Regular.woff2) format("woff2"),
+    url(../fonts/NeueMachina-Regular.woff) format("woff"),
+    url(../fonts/NeueMachina-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: local("Neue Machina Bold"), local("Neue-Machina-Bold"),
+    url(../fonts/NeueMachina-Bold.woff2) format("woff2"),
+    url(../fonts/NeueMachina-Bold.woff) format("woff"),
+    url(../fonts/NeueMachina-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: local("Futura Bold"), local("Futura-Bold"),
+    url(../fonts/Futura-Bold-font.woff2) format("woff2"),
+    url(../fonts/Futura-Bold-font.woff) format("woff"),
+    url(../fonts/Futura-Bold-font.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: local("futura medium bt"), local("futura-medium-bt"),
+    url(../fonts/futura-medium-bt.woff2) format("woff2"),
+    url(../fonts/futura-medium-bt.woff) format("woff"),
+    url(../fonts/futura-medium-bt.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* reset start */
+
+h1,
+h2,
+h1,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+}
+/* reset end */
+
+body {
+  font-family: "Neue Machina", sans-serif;
+  background-color: #eeeeee;
+  margin: 0;
+}
+.container {
+  max-width: 1920px;
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  align-items: center;
+}
+.header {
+  display: flex;
+  padding: 20px 200px 0 200px;
+  align-items: center;
+  max-width: 1520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-container {
+  display: flex;
+}
+.navigation {
+  max-width: 100%;
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.action {
+  font-family: "Neue Machina", sans-serif;
+  color: var(--color-action);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-right: auto;
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-head {
+  font-family: "Neue Machina Light", sans-serif;
+
+  display: block;
+  padding-top: 37px;
+  padding-bottom: 26px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  color: #000000;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.logo-header {
+  width: 200px;
+  height: 53px;
+  margin: 20px 303px 17px 40px;
+}
+.header-button {
+  display: block;
+
+  min-width: 157px;
+  min-height: 70px;
+  border-radius: 46px;
+  font-family: "Futura";
+  border: none;
+  color: #ffffff;
+
+  background-color: #1e1515;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 2.6;
+  letter-spacing: 0.04em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-button:hover {
+  background-color: #60bc96;
+}
+.header-button:focus {
+  background-color: var(--color-active-action);
+}
+.header-btn {
+  padding: 10px 10px 10px 376px;
+}
+.hero-container {
+  display: flex;
+}
+.about-left-side {
+}
+
+.hero-text {
+  width: 740px;
+  font-family: "Neue Machina Light", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 77px;
+  display: flex;
+  margin: 200px 0px 60px 200px;
+}
+.hero-button {
+  min-width: 157px;
+  min-height: 70px;
+  border-radius: 46px;
+  font-family: "Futura";
+  border: none;
+  color: #ffffff;
+
+  margin: 0px 0px 40px 200px;
+
+  background-color: #1e1515;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 2.6;
+  letter-spacing: 0.04em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-button:hover {
+  background-color: #60bc96;
+}
+.hero-button:focus {
+  background-color: var(--color-active-action);
+}
+.hero-paragraph {
+  font-family: "Neue Machina Regular", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0px 0px 0px 200px;
+}
+.span-text {
+  font-family: "Neue Machina Regular", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 150%;
+}
+.hero-img {
+  width: 780px;
+  height: 690px;
+  border-radius: 45px;
+  margin: 80px 200px 120px 0px;
+}
+.sponsors-img {
+  width: 1983px;
+  height: 143px;
+
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}
