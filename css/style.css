@@ -67,6 +67,14 @@ body {
   justify-content: center;
   align-items: center;
 }
+.advantages-container-block {
+  display: none;
+}
+@media only screen and (min-width: 1200px) {
+  .advantages-container-block {
+    display: block;
+  }
+}
 
 .container {
   max-width: 1920px;
@@ -77,29 +85,58 @@ body {
 
   align-items: center;
 }
+@media only screen and (min-width: 200px) {
+  .container {
+    max-width: 1920px;
+  }
+}
 .header {
   display: flex;
-  padding: 20px 200px 0 200px;
+  padding: 40px 20px 0px 20px;
   align-items: center;
-  max-width: 1520px;
-  margin-left: auto;
-  margin-right: auto;
+
+  width: 390px;
+  max-width: 100%;
+  height: 80px;
+}
+@media only screen and (min-width: 1200px) {
+  .header {
+    padding: 20px 200px 0 200px;
+    width: 1520px;
+  }
 }
 
 .header-container {
-  width: 1520px;
-  max-width: 100%;
-}
-.navigation {
-  width: 1520px;
-  max-width: 100%;
-  height: 90px;
   background-color: rgba(0, 0, 0, 0.05);
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 20px;
+}
+.nav-list {
   display: flex;
   align-items: center;
+  gap: 60px;
+  margin-right: auto;
+}
+@media only screen and (max-width: 1199px) {
+  .nav-list {
+    display: none;
+  }
+}
+
+.navigation {
+  width: 390px;
+  max-width: 100%;
+  height: 90px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width: 1199px) {
+  .navigation {
+    width: 1520px;
+  }
 }
 
 .action {
@@ -111,27 +148,19 @@ body {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
+  margin-right: auto;
 }
 
 .link {
   text-decoration: none;
 }
 
-.nav-list {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  margin-right: auto;
-}
 .list {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 .menu-head {
   font-family: "Neue Machina Light", sans-serif;
 
-  display: block;
   padding-top: 37px;
   padding-bottom: 26px;
   text-decoration: none;
@@ -141,13 +170,21 @@ body {
   font-size: 18px;
   line-height: 1.6;
 }
-
+@media only screen and (min-width: 1200px) {
+  .logo-header {
+    margin: 20px 303px 17px 40px;
+    width: 200px;
+    height: 53px;
+  }
+}
 .logo-header {
   width: 200px;
   height: 53px;
-  margin: 20px 303px 17px 40px;
+  margin-left: 20px;
 }
+
 .header-button {
+  display: none;
   min-width: 157px;
   min-height: 70px;
   border-radius: 46px;
@@ -166,47 +203,81 @@ body {
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media only screen and (min-width: 1199px) {
+  .header-button {
+    display: block;
+  }
+}
+
 .header-button:hover {
   background-color: #60bc96;
 }
 .header-button:focus {
-  background-color: var(--color-active-action);
+  background-color: #60bc96;
 }
 .header-btn {
   padding: 10px 10px 10px 376px;
 }
 .hero-container {
   display: flex;
+  padding: 0px 20px 0px 20px;
 }
 .about-left-side {
 }
-
 .hero-text {
-  width: 740px;
   font-family: "Neue Machina Light", sans-serif;
-  text-transform: uppercase;
+  position: absolute;
+  font-style: normal;
   font-weight: 400;
-  font-size: 80px;
-  line-height: 77px;
-  display: flex;
-  margin: 200px 0px 20px 200px;
+  font-size: 34px;
+  line-height: 33px;
+  text-transform: uppercase;
+  top: 170px;
+  left: 55px;
+  color: #000000;
+}
+@media only screen and (min-width: 1200px) {
+  .hero-text {
+    margin: 190px 0px 0px 200px;
+    width: 740px;
+    font-family: "Neue Machina Light", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 77px;
+    color: #000000;
+    position: static;
+  }
 }
 
 .ventureHR {
+  position: absolute;
+  top: 259px;
+  left: 10px;
   height: 0px;
-  width: 364px;
+  width: 165px;
   border: 1px solid rgba(0, 0, 0, 0.16);
-  margin: 0px 0px 60px 200px;
+  margin: 20px 0px 501px 50px;
+}
+@media only screen and (min-width: 1200px) {
+  .ventureHR {
+    width: 364px;
+    margin: 0px 0px 60px 200px;
+    position: static;
+  }
 }
 .hero-button {
-  min-width: 157px;
-  min-height: 70px;
+  top: 711px;
+  left: -178px;
+  position: absolute;
+  min-width: 390px;
+  min-height: 80px;
   border-radius: 46px;
   font-family: "Futura";
   border: none;
   color: #ffffff;
 
-  margin: 0px 0px 40px 200px;
+  margin: 0px 0px 0px 200px;
 
   background-color: #1e1515;
   cursor: pointer;
@@ -219,18 +290,58 @@ body {
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .hero-button:hover {
   background-color: #60bc96;
 }
 .hero-button:focus {
-  background-color: var(--color-active-action);
+  background-color: #60bc96;
+}
+
+@media only screen and (min-width: 1200px) {
+  .hero-button {
+    position: static;
+    min-width: 157px;
+    min-height: 70px;
+    border-radius: 46px;
+    font-family: "Futura";
+    border: none;
+    color: #ffffff;
+
+    margin: 0px 0px 40px 200px;
+
+    background-color: #1e1515;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+   {
+  }
 }
 .hero-paragraph {
   font-family: "Neue Machina Regular", sans-serif;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 150%;
-  margin: 0px 0px 0px 200px;
+  font-size: 16px;
+  line-height: 125%;
+
+  color: #000000;
+  /* margin: 386px 31px 103px 32px; */
+  margin: 488px 33px 174px 20px;
+}
+@media only screen and (min-width: 1200px) {
+  .hero-paragraph {
+    font-family: "Neue Machina Regular", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0px 0px 0px 200px;
+  }
 }
 .span-text {
   font-family: "Neue Machina Regular", sans-serif;
@@ -239,17 +350,48 @@ body {
   line-height: 150%;
 }
 .hero-img {
-  width: 780px;
-  height: 690px;
   border-radius: 45px;
-  margin: 80px 200px 120px 0px;
+  position: absolute;
+  width: 390px;
+  height: 290px;
+  top: 301px;
+  left: 26px;
 }
+
+@media only screen and (min-width: 1200px) {
+  .hero-img {
+    position: static;
+    width: 780px;
+    height: 690px;
+    border-radius: 45px;
+    margin: 80px 200px 120px 0px;
+  }
+}
+
 .sponsors-img {
-  width: 1983px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 430px;
   height: 143px;
-  margin-left: -45px;
+  left: -45px;
+  top: 1000px;
   border: 1px solid rgba(0, 0, 0, 0.23);
 }
+@media only screen and (min-width: 1200px) {
+  .sponsors-img {
+    box-sizing: border-box;
+  
+    width: 1983px;
+    height: 143px;
+    left: -45px;
+    top: 1000px;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+  } {
+    
+  }
+}
+
 
 .info-section {
 }
@@ -257,42 +399,127 @@ body {
 .info-hero-text {
   font-family: "Neue Machina Regular", sans-serif;
   font-weight: 400;
-  font-size: 64px;
-  line-height: 125%;
+  font-size: 25px;
+  line-height: 130%;
+  /* or 32px */
+
   text-align: center;
+
   color: #000000;
-  margin-top: 200px;
-  margin-bottom: 97px;
+  margin-top: 80px;
+  margin-bottom: 60px;
 }
+
+@media only screen and (min-width: 1200px) {
+  .info-hero-text {
+    font-family: "Neue Machina Regular", sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 125%;
+    text-align: center;
+    color: #000000;
+    margin-top: 200px;
+    margin-bottom: 97px;
+  }
+   {
+  }
+}
+
 .info-content {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 318px;
+  display: block;
+
+  margin-bottom: 120px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .info-content {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 318px;
+  }
 }
 .img-info-section {
-  width: 740px;
-  height: 662px;
+  width: 390px;
+  height: 260px;
   border-radius: 45px;
-  margin-left: 200px;
+  margin-left: 20px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .img-info-section {
+    width: 740px;
+    height: 662px;
+    border-radius: 45px;
+    margin-left: 200px;
+  }
+   {
+  }
 }
 .info-section-container {
-  width: 740px;
-  max-height: 662px;
+  width: 390px;
+  max-height: 743px;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 30px;
-  padding: 100px 0px 0px 100px;
+padding: 10px 20px;
   align-items: center;
+}
+@media only screen and (min-width: 1200px) {
+  .info-section-container {
+    width: 390px;
+    max-height: 743px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    padding: 100px 0px 0px 100px;
+    align-items: center;
+  } {
+    
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .info-section-container {
+    width: 740px;
+    max-height: 662px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    padding: 100px 0px 0px 100px;
+    align-items: center;
+  }
+   {
+  }
+}
+.text-mob{
+  padding: 40px 52px 52px 52px;
 }
 .section-title {
   font-family: "Neue Machina Regular", sans-serif;
+  font-style: normal;
   font-weight: 400;
-  font-size: 38px;
-  line-height: 100%;
+  font-size: 22px;
+  line-height: 110%;
+  /* or 24px */
+
   text-transform: uppercase;
   margin-bottom: 60px;
 
   color: #000000;
 }
+
+@media only screen and (min-width: 1200px) {
+  .section-title {
+    font-family: "Neue Machina Regular", sans-serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+
+    color: #000000;
+    pa
+  }
+   {
+  }
+}
+
 .section-info-text {
   font-family: "Neue Machina Regular", sans-serif;
   font-weight: 300;
@@ -490,10 +717,21 @@ body {
 }
 
 .roadmap-hero-text {
-  display: flex;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   position: relative;
+}
+
+@media only screen and (min-width: 1200px) {
+  .roadmap-hero-text {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  } {
+    
+  }
 }
 .roadmap-banner {
   position: absolute;
@@ -502,50 +740,124 @@ body {
   left: 245px;
   top: 25.340000000000003px;
   z-index: -7;
+  display: none;
 
   transform: matrix(-1, 0.03, 0.03, 1, 0, 0);
 }
+
+@media only screen and (min-width: 1200px) {
+  .roadmap-banner {
+    display: block;
+    position: absolute;
+    width: 452.18px;
+    height: 68.72px;
+    left: 245px;
+    top: 25.340000000000003px;
+    z-index: -7;
+  
+    transform: matrix(-1, 0.03, 0.03, 1, 0, 0);
+  } {
+    
+  }
+}
 .roadmap-hero {
-  width: 496px;
+  width: 124px;
 
   font-family: "Neue Machina Regular", sans-serif;
   font-weight: 400;
-  font-size: 64px;
-  line-height: 62px;
-  text-transform: uppercase;
-  margin-left: 197px;
-  margin-right: 137px;
+font-size: 25px;
+line-height: 110%;
+/* or 28px */
+
+text-transform: uppercase;
+
+color: #000000;
+  margin-left: 48px;
+  margin-right: 48px;
   text-align: center;
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .roadmap-hero {
+    width: 496px;
+  
+    font-family: "Neue Machina Regular", sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 62px;
+    text-transform: uppercase;
+    margin-left: 197px;
+    margin-right: 137px;
+    text-align: center;
+  }
+   {
+    
+  }
 }
 
 .roadmap-text-container {
   max-width: 890px;
-  height: 329px;
+
   background: rgba(0, 0, 0, 0.05);
   border-radius: 30px;
+  overflow: hidden;
+  padding: 60px 60px 60px 60px;
 }
 .roadmap-text {
   font-family: "Neue Machina Light", sans-serif;
   font-weight: 300;
-  font-size: 38px;
-  line-height: 57px;
-  color: #000000;
-  overflow: hidden;
-  padding: 60px 60px 60px 60px;
+  font-size: 20px;
+  line-height: 150%;
+  /* or 30px */
+  
+  
+  color: #000000
+}
+
+@media only screen and (min-width: 1200px) {
+  .roadmap-text {
+    font-family: "Neue Machina Light", sans-serif;
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 57px;
+    color: #000000;
+  } {
+    
+  }
 }
 .roadmap-img {
+  display: none;
   position: absolute;
   margin: -1037px 0px 0px 346px;
 
   min-width: 1038px;
   min-height: 2568px;
 }
+
+
+@media only screen and (min-width: 1200px) {
+  .roadmap-img {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .roadmap-numbers {
+    display: block;
+  }
+}
 .roadmap-numbers {
+  display: none;
   position: absolute;
   margin: 263px 0px 0px 450px;
 }
 .roadmap-items {
-  display: flex;
+  display: none;
+}
+@media only screen and (min-width: 1200px) {
+  .roadmap-items {
+    display: flex;
+  }
 }
 
 .roadmap-items-first-banner {
@@ -730,67 +1042,178 @@ body {
 .tokenomisc {
 }
 .token-banner {
+  display: none;
   position: absolute;
 
   left: 162.95px;
   top: 0px;
   z-index: -7;
 }
+
+@media only screen and (min-width: 1200px) {
+  .token-banner {
+    display: block;
+    position: absolute;
+  
+    left: 162.95px;
+    top: 0px;
+    z-index: -7;
+  } {
+    
+  }
+}
 .token-hero {
   font-family: "Neue Machina Regular", sans-serif;
   font-weight: 400;
-  font-size: 64px;
-  line-height: 62px;
-  text-transform: uppercase;
-  margin-left: 200px;
+font-size: 25px;
+line-height: 110%;
+/* identical to box height, or 28px */
+
+text-transform: uppercase;
+margin-left: 49px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .token-hero {
+    font-family: "Neue Machina Regular", sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 62px;
+    text-transform: uppercase;
+    margin-left: 200px;
+  } {
+    
+  }
 }
 .token-container {
-  margin-top: 335px;
+  margin-top: 122px;
   position: relative;
+}
+
+@media only screen and (min-width: 1200px) {
+  .token-container {
+    margin-top: 335px;
+    position: relative;
+  } {
+    
+  }
 }
 .tokem-items {
   display: flex;
-  margin-top: 200px;
+  margin-top: 40.22px;
+  flex-direction: column-reverse;
+}
+@media only screen and (min-width: 1200px) {
+  .tokem-items {
+    display: flex;
+    margin-top: 40.22px;
+    flex-direction: row;
+  } {
+    
+  }
 }
 .tokem-items-first {
-  width: 582px;
-  height: 250px;
+  width: 300px;
+  height: 149px;
   background: rgba(199, 219, 226, 0.6);
   box-shadow: 0px 12px 21px rgba(130, 130, 130, 0.15);
 
   border-radius: 45px;
   padding: 40px;
 
-  margin-left: 200px;
+  margin-left: 20.34px;
+  
+}
+
+@media only screen and (min-width: 1200px) {
+  .tokem-items-first {
+    width: 582px;
+    height: 250px;
+    background: rgba(199, 219, 226, 0.6);
+    box-shadow: 0px 12px 21px rgba(130, 130, 130, 0.15);
+  
+    border-radius: 45px;
+    padding: 40px;
+  
+    margin-left: 200px;
+  }
+   {
+    
+  }
 }
 .tokem-items-first-text {
   font-family: "Neue Machina", sans-serif;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 150%;
-  color: #2d2d2d;
+  font-size: 16px;
+  line-height: 125%;
+  /* or 20px */
+  
+  
+  color: #2D2D2D;}
+
+@media only screen and (min-width: 1200px) {
+  .tokem-items-first-text {
+    font-family: "Neue Machina", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    color: #2d2d2d;
+  } {
+    
+  }
 }
 .tokem-items-first-interest {
   font-family: "Neue Machina", sans-serif;
   font-weight: 800;
-  font-size: 80px;
-  line-height: 77px;
+  font-size: 36.1739px;
+  line-height: 35px;
   text-transform: uppercase;
-
+  
   color: #000000;
-
   text-align: end;
-  margin-top: 128px;
+  margin-top: 63px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .tokem-items-first-interest {
+    font-family: "Neue Machina", sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 77px;
+    text-transform: uppercase;
+  
+    color: #000000;
+  
+    text-align: end;
+    margin-top: 128px;
+  } {
+    
+  }
 }
 
 .tokem-items-second {
-  width: 270px;
-  height: 246px;
+  width: 170px;
+  height: 150px;
   padding: 40px;
   background: rgba(236, 205, 205, 0.6);
   box-shadow: 0px 12px 21px rgba(130, 130, 130, 0.15);
   border-radius: 45px;
   margin-left: 20px;
+}
+
+@media only screen and (min-width: 1200px) {
+  
+  .tokem-items-second {
+    width: 270px;
+    height: 246px;
+    padding: 40px;
+    background: rgba(236, 205, 205, 0.6);
+    box-shadow: 0px 12px 21px rgba(130, 130, 130, 0.15);
+    border-radius: 45px;
+    margin-left: 20px;
+  } {
+    
+  }
 }
 .tokem-items-second-text {
   font-family: "Neue Machina", sans-serif;
@@ -800,51 +1223,136 @@ body {
 
   color: #2d2d2d;
 }
+@media only screen and (min-width: 1200px) {
+  .tokem-items-second-text {
+    font-family: "Neue Machina", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 125%;
+    /* or 20px */
+    
+    
+    color: #2D2D2D;
+  } {
+    
+  }
+}
 .tokem-items-second-interest {
   font-family: "Neue Machina", sans-serif;
   font-weight: 800;
-  font-size: 80px;
-  line-height: 77px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36.1739px;
+  line-height: 35px;
   text-transform: uppercase;
-
+  
   color: #000000;
   text-align: end;
-  margin-top: 127px;
+  margin-top: 15px;
+}
+@media only screen and (min-width: 1200px) {
+  .tokem-items-second-interest {
+    font-family: "Neue Machina", sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 77px;
+    text-transform: uppercase;
+  
+    color: #000000;
+    text-align: end;
+    margin-top: 127px;
+  } {
+    
+  }
 }
 .token-second-container {
   display: flex;
+  flex-wrap: wrap;
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .token-second-container {
+    display: flex;
+    flex-wrap: nowrap;
+    
+  } {
+    
+  }
 }
 .tokem-items-third {
-  width: 295px;
-  height: 250px;
+  width: 180px;
+  height: 150px;
   background: rgba(234, 223, 201, 0.6);
   box-shadow: 0px 12px 21px rgba(130, 130, 130, 0.15);
   border-radius: 45px;
-  margin: 20px 0px 0px 200px;
+  margin: 0px 0px 0px 20px;
   padding: 40px;
+}
+@media only screen and (min-width: 1200px) {
+  
+  .tokem-items-third {
+    width: 295px;
+    height: 250px;
+    background: rgba(234, 223, 201, 0.6);
+    box-shadow: 0px 12px 21px rgba(130, 130, 130, 0.15);
+    border-radius: 45px;
+    margin: 20px 0px 0px 200px;
+    padding: 40px;
+  } {
+    
+  }
 }
 .tokem-items-third-text {
   font-weight: 300;
-  font-size: 18px;
-  line-height: 150%;
+  font-size: 16px;
+  line-height: 125%;
+  /* or 20px */
+  
+  
+  color: #2D2D2D;
+}
 
-  color: #2d2d2d;
+@media only screen and (min-width: 1200px) {
+  .tokem-items-third-text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+  
+    color: #2d2d2d;
+  } {
+    
+  }
 }
 .tokem-items-third-interest {
   font-family: "Neue Machina", sans-serif;
   font-weight: 800;
-  font-size: 80px;
-  line-height: 77px;
+  font-size: 36.1739px;
+  line-height: 35px;
   text-transform: uppercase;
-
+  
   color: #000000;
   text-align: end;
-  margin-top: 154px;
+  margin-top: 83px;
 }
-
+@media only screen and (min-width: 1200px) {
+  .tokem-items-third-interest {
+    font-family: "Neue Machina", sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 77px;
+    text-transform: uppercase;
+  
+    color: #000000;
+    text-align: end;
+    margin-top: 154px;
+  } {
+    
+  }
+}
 .tokem-items-fourth {
-  width: 295px;
-  height: 250px;
+  width: 169px;
+  height: 150px;
 
   background: rgba(203, 227, 198, 0.6);
   box-shadow: 0px 12px 21px rgba(130, 130, 130, 0.15);
@@ -852,61 +1360,164 @@ body {
   margin: 20px 0px 0px 20px;
   padding: 40px;
 }
+
+@media only screen and (min-width: 1200px) {
+  .tokem-items-fourth {
+    width: 295px;
+    height: 250px;
+  
+    background: rgba(203, 227, 198, 0.6);
+    box-shadow: 0px 12px 21px rgba(130, 130, 130, 0.15);
+    border-radius: 45px;
+    margin: 20px 0px 0px 20px;
+    padding: 40px;
+  } {
+    
+  }
+}
 .tokem-items-fourth-text {
   font-weight: 300;
-  font-size: 18px;
-  line-height: 150%;
-
-  color: #2d2d2d;
+  font-size: 16px;
+  line-height: 125%;
+  /* or 20px */
+  
+  
+  color: #2D2D2D;
+}
+@media only screen and (min-width: 1200px) {
+  .tokem-items-fourth-text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+  
+    color: #2d2d2d;
+  } {
+    
+  }
 }
 .tokem-items-fourth-interest {
   font-family: "Neue Machina", sans-serif;
   font-weight: 800;
-  font-size: 80px;
-  line-height: 77px;
+  font-size: 36.1739px;
+  line-height: 35px;
   text-transform: uppercase;
-
+  
   color: #000000;
-  text-align: end;
-  margin-top: 154px;
+  margin-top: 85px;
+}
+@media only screen and (min-width: 1200px) {
+  .tokem-items-fourth-interest {
+    font-family: "Neue Machina", sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 77px;
+    text-transform: uppercase;
+  
+    color: #000000;
+    text-align: end;
+    margin-top: 154px;
+  } {
+    
+  }
 }
 
+
 .tokem-items-fifth {
-  width: 295px;
-  height: 250px;
+  width: 180px;
+  height: 150px;
   background: rgba(205, 210, 237, 0.6);
   box-shadow: 0px 12px 21px rgba(130, 130, 130, 0.15);
   border-radius: 45px;
   margin: 20px 0px 0px 20px;
   padding: 40px;
 }
+
+@media only screen and (min-width: 1200px) {
+  .tokem-items-fifth {
+    width: 295px;
+    height: 250px;
+    background: rgba(205, 210, 237, 0.6);
+    box-shadow: 0px 12px 21px rgba(130, 130, 130, 0.15);
+    border-radius: 45px;
+    margin: 20px 0px 0px 20px;
+    padding: 40px;
+  } {
+    
+  }
+}
 .tokem-items-fifth-text {
   font-weight: 300;
-  font-size: 18px;
-  line-height: 150%;
+  font-size: 16px;
+  line-height: 125%;
+  /* or 20px */
+  
+  
+  color: #2D2D2D;
+}
 
-  color: #2d2d2d;
+@media only screen and (min-width: 1200px) {
+  .tokem-items-fifth-text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+  
+    color: #2d2d2d;
+  } {
+    
+  }
 }
 .tokem-items-fifth-interest {
   font-family: "Neue Machina", sans-serif;
   font-weight: 800;
-  font-size: 80px;
-  line-height: 77px;
+  font-size: 36.1739px;
+  line-height: 35px;
   text-transform: uppercase;
-
+  
   color: #000000;
-  text-align: end;
-  margin-top: 154px;
+  margin-top: 85px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .tokem-items-fifth-interest {
+    font-family: "Neue Machina", sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 77px;
+    text-transform: uppercase;
+  
+    color: #000000;
+    text-align: end;
+    margin-top: 154px;
+  } {
+    
+  }
 }
 .tokenomisc {
 }
 .token-img {
+  width: 316.5px;
+  height: 323.39px;
   position: absolute;
   right: -10px;
   z-index: -7;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0px -264px 0px 1134.77px;
+  margin: -115px -102px 0px 0px
+}
+
+@media only screen and (min-width: 1200px) {
+  .token-img {
+    width: 1163.23px;
+height: 1188.55px;
+    position: absolute;
+    right: -10px;
+    z-index: -7;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: -282px -264px 0px 1134.77px;
+  } {
+    
+  }
 }
 
 .FAQs {
@@ -914,17 +1525,44 @@ body {
 .FAQs-hero {
   font-family: "Neue Machina Regular", sans-serif;
   font-weight: 300;
-  font-size: 267px;
+  font-size: 60px;
   line-height: 100%;
-
+  /* or 60px */
+  
   text-align: center;
-  text-transform: uppercase;
+  
+  color: #000000;
   margin-top: 311px;
   margin-bottom: 193px;
+  margin-left: 0px;
+}
+@media only screen and (min-width: 1200px) {
+  .FAQs-hero {
+    font-family: "Neue Machina Regular", sans-serif;
+    font-weight: 300;
+    font-size: 267px;
+    line-height: 100%;
+  
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 311px;
+    margin-bottom: 193px;
+    margin-left: 0px;
+  } {
+    
+  }
 }
 .faqBox {
-  width: 1520px;
+  width: 400px;
 }
+@media only screen and (min-width: 1200px) {
+  .faqBox {
+    width: 1520px;
+  } {
+    
+  }
+}
+
 
 details {
   font-family: "Neue Machina";
@@ -976,21 +1614,39 @@ summary {
 
 .answerText {
   font-family: "Neue Machina Light", sans-serif;
-  width: 600px;
+  width: 219px;
   font-weight: 300;
+  font-size: 16px;
+  line-height: 125%;
+  /* or 20px */
+  
+  
+  color: #000000; font-weight: 300;
   font-size: 28px;
   line-height: 180%;
 
   color: #000000;
 }
-
+@media only screen and (min-width: 1200px) {
+  .answerText {
+    font-family: "Neue Machina Light", sans-serif;
+    width: 600px;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 180%;
+  
+    color: #000000;
+  } {
+    
+  }
+}
 summary::-webkit-details-marker {
   display: none;
 }
 
 summary:after {
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
   display: flex;
   content: "\2192";
   align-items: center;
@@ -1015,20 +1671,63 @@ details[open] div {
   padding: 50px 100px;
 }
 .team {
-  display: flex;
+  display: block;
   flex-direction: column;
-  width: 1520px;
+  width: 390px;
   margin-top: 288px;
   margin-bottom: 300px;
 }
 
+@media only screen and (min-width: 1200px) {
+  .team {
+    display: flex;
+    flex-direction: column;
+    width: 1520px;
+    margin-top: 288px;
+    margin-bottom: 300px;
+  }
+  
+   {
+    
+  }
+}
 .teamContentBox {
-  display: flex;
+  display: block;
   gap: 40px;
   justify-content: center;
   align-items: center;
+  margin-right: 107px;
 }
 
+@media only screen and (min-width: 1200px) {
+  .teamContentBox {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+  } {
+    
+  }
+}
+.teamleader {
+  display: block;
+  width: 390px;
+  height: 260px;
+  border-radius: 45px;
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 1200px) {
+  .teamleader {
+    width: 740px;
+    height: 535px;
+    border-radius: 45px;
+    margin-left: 0px;
+  } {
+    
+  }
+}
 .ourTeamHeader {
   font-family: "Neue Machina Regular", sans-serif;
   font-style: normal;
@@ -1040,49 +1739,168 @@ details[open] div {
   padding: 0;
   margin-bottom: 80px;
 }
-
 .ourTeamBg {
+  display: none;
   position: absolute;
   z-index: -1;
   margin-top: 17.28px;
   margin-left: -22px;
+ 
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .ourTeamBg {
+    position: absolute;
+    z-index: -1;
+    margin-top: 17.28px;
+    margin-left: -22px;
+    display: block
+  } {
+    
+  }
 }
 
 .meetOurTeam {
-  width: 740px;
+ width: 390px; 
   height: 535px;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 30px;
 }
 
-.teamContent {
-  padding: 100px;
+@media only screen and (min-width: 1200px) {
+  .meetOurTeam {
+    width: 740px;
+    height: 535px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+  } {
+    
+  }
 }
 
+.teamContent {
+  max-width: 390px;
+  padding: 51px 3px;
+}
+@media only screen and (min-width: 1200px) {
+  .teamContent {
+    max-width: 790px;
+    padding: 100px;
+  }
+   {
+    
+  }
+}
 .teamHeader {
   font-family: "Neue Machina Regular", sans-serif;
   font-style: normal;
   width: 215px;
   font-weight: 400;
-  font-size: 38px;
-  line-height: 100%;
-  color: #000;
+  font-size: 22px;
+  line-height: 110%;
+  /* or 24px */
+  
+  text-transform: uppercase;
+  
+  color: #000000
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.33);
   text-transform: uppercase;
 }
-
+@media only screen and (min-width: 1200px) {
+  
+  .teamHeader {
+    font-family: "Neue Machina Regular", sans-serif;
+    font-style: normal;
+    width: 215px;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 100%;
+    color: #000;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.33);
+    text-transform: uppercase;
+  } {
+    
+  }
+}
+.img-superpower{
+  display: none;
+}
+@media only screen and (max-width: 1199px) {
+  .img-superpower{
+    display: block;
+  } {
+    
+  }
+}
+.snake-img-mob{
+  display: none;
+}
+@media only screen and (max-width: 1199px) {
+  
+  .snake-img-mob{
+    display: block;
+  } {
+    
+  }
+}
 .teamText {
-  width: 503px;
+  width: 390px;
   font-family: "Neue Machina Regular", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 125%;
+ 
+  /* or 22px */
+  
+  
+  color: #000000;}
+
+@media only screen and (min-width: 1200px) {
+  .teamText {
+    width: 503px;
+    font-family: "Neue Machina Regular", sans-serif;
+    font-weight: 400;
   font-size: 18px;
   line-height: 150%;
   margin-top: 40px;
+    margin-top: 40px;
+  } {
+    
+  }
 }
 footer {
-  display: flex;
+  display: none;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 390px;
+  height: 295px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 45px;
+  margin-bottom: 20px;
+  padding: 40px;
+}
+@media only screen and (min-width: 1200px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    max-width: 1520px;
+    height: 560px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 45px;
+    margin-bottom: 20px;
+    padding: 40px;
+  } {
+    
+  }
+  
+}
+.mob-footer{
+  display: none;
   justify-content: center;
   align-items: flex-end;
   max-width: 1520px;
@@ -1091,17 +1909,83 @@ footer {
   border-radius: 45px;
   margin-bottom: 20px;
   padding: 40px;
-}
-.footer-container {
-  max-width: 1520px;
-  width: 100%;
-  max-height: 560px;
 
-  margin-left: auto;
-  margin-right: auto;
-
-  align-items: center;
 }
+
+.footer-mobile-list-first{
+  display: flex;
+  justify-content: center;
+  margin: -249px 0px 0px -38px;
+  position: relative;
+}
+.footer-mobile-list-second{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10029px;
+  left: 86px;
+
+
+}
+.footer-mob-container{
+  position: relative;
+}
+.footer-mob-private {
+  position: absolute;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 140%;
+  /* or 18px */
+  left: 295px;
+  top: 10202px;
+  color: #8D8D8D;
+}
+.footer-mob-text-second {
+  position: absolute;
+  font-weight: 300;
+font-size: 13px;
+line-height: 140%;
+left: 261px;
+top: 10218px;
+/* or 18px */
+
+
+color: #8D8D8D;
+}
+.mob-footer-logo{
+  position: absolute;
+  left: 39px;
+  top: 10156px;
+}
+@media only screen and (max-width: 1199px) {
+  .mob-footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    max-width: 390px;
+    height: 295px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 45px;
+    margin-bottom: 20px;
+    padding: 40px;
+  
+  } {
+    
+  }
+}
+
+
+  .footer-container {
+    max-width: 1520px;
+    width: 100%;
+    max-height: 560px;
+  
+    margin-left: auto;
+    margin-right: auto;
+  
+    align-items: center;
+  } 
+
 
 .footerBigBox {
   display: flex;
@@ -1144,13 +2028,26 @@ footer {
 }
 
 .linkText {
+  display:none;
   font-family: "Neue Machina";
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 150%;
 }
-
+@media only screen and (min-width: 1200px) {
+  .linkText {
+    display:block;
+    font-family: "Neue Machina";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+  }
+   {
+    
+  }
+}
 .footerInfoBox {
   display: flex;
   flex-direction: row;
@@ -1191,6 +2088,12 @@ footer {
   gap: 60px;
 }
 .linkArrow {
+  display: block;
+  padding: 0px 0px 0px 411px;
+}
+
+.linkArrow {
+  display: block;
   padding: 0px 0px 0px 411px;
 }
 .footerMenu a {
@@ -1204,21 +2107,24 @@ footer {
 }
 
 .footer-button {
-  font-weight: 500;
+  width: 390px;
+  height: 80px;
   font-size: 41px;
   line-height: 130%;
 
   color: #ffffff;
   position: absolute;
-
-  width: 669px;
-  height: 190px;
-  margin: -93px 0px 0px 669px;
-  border-radius: 143px;
   font-family: "Futura";
-  border: none;
-  color: #ffffff;
 
+  margin: -32px 0px 0px 22px;
+  border-radius: 143px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+  /* or 31px */
+  
+  
+  color: #FFFFFF;
   background-color: #1e1515;
   cursor: pointer;
 
@@ -1233,6 +2139,35 @@ footer {
 }
 .footer-button:focus {
   background-color: #60bc96;
+}
+@media only screen and (min-width: 1200px) {
+  .footer-button {
+    font-weight: 500;
+    font-size: 41px;
+    line-height: 130%;
+  
+    color: #ffffff;
+    position: absolute;
+  
+    width: 669px;
+    height: 190px;
+    margin: -93px 0px 0px 669px;
+    border-radius: 143px;
+    font-family: "Futura";
+    border: none;
+    color: #ffffff;
+  
+    background-color: #1e1515;
+    cursor: pointer;
+  
+    letter-spacing: 0.04em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  } {
+    
+  }
 }
 
 .back-blur {
@@ -1400,4 +2335,68 @@ footer {
 
 .back-blur-container {
   position: relative;
+}
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
 }

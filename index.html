@@ -11,7 +11,7 @@
   />
   </head>
   <body>
-    <header class="header">
+    <header class="header ">
       <div class="container header-container">
         <nav class="navigation">
           <a class="action link" href="index.html">
@@ -26,11 +26,30 @@
             <li><a href="#" class="menu-head link">Whitepaper</a></li>
             <li><a href="#" class="menu-head link">DAO</a></li>
             <li><a href="#" class="menu-head link">Contact</a></li>
-        </ul>
-        <div class="header-btn">
-        <button class="header-button link">Get Start</button>
-      </div>
-    </nav>
+          </ul>
+          <button class="header-button link">Get Start</button>
+          
+          <button
+                class="menu-toggle js-open-menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+        </div>
+      </nav>
   </div>
 </header>
 <section class="hero-section">
@@ -76,15 +95,17 @@
             <div class="info-content">
                 <img class="img-info-section" src=".//images/Photo-info.jpg" alt="photo-info">
                 <div class="info-section-container">
+                  <div class="text-mob">
                     <h2 class="section-title">Perseus DeFi<br> Syndicate is</br>a democratic?</h2>
                     <p class="section-info-text">Blocckchain-based platform. Investors from all <br>walks of life can harness the collective wisdom to</br> <span class=""> their investment strategies</span>, realizing <br>the full potential of decentralized finance.</br></p>
                 <a class="link info-link" href="#">Learn More</a>
+              </div>
             </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="container">
+        <div class="container advantages-container-block">
             <h1 class="advantages-hero-text">Perseus Superpower</h1>
 
         <div class="advantages-container">
@@ -164,8 +185,12 @@
           <div class="roadmap-text-container">
             <p class="roadmap-text">This roadmap is a guideline and may be <br> subject to change based on the evolving </br> DiFi landscape and the needs of the Perseus DeFi Syndicate community.</p>
           </div> 
+          <img class="snake-img-mob" src="./images/Group222.png" alt="">
         </div>
-      <img class="roadmap-img" src="./images/Group1.png" alt="roadmap">
+        <div >
+          <img class="img-superpower" src="./images/Perseus Superpower.png" alt="">
+        </div>
+       <img class="roadmap-img" src="./images/Group1.png" alt="roadmap">
       <img class="roadmap-numbers" src="./images/Group2.png" alt="roadmap-numbers">
       <div class="roadmap-items">
         <div class="roadmap-items-first" >
@@ -222,12 +247,12 @@
                                   
                                 </div>
         </div>
-      </div>
+      </div> 
     </div>
     </section>
     <section class="tokenomisc">
-      <img class="token-img" src="./images/Group3.png" alt="token">
       <div class="container token-container" >
+        <img class="token-img" src="./images/Group3.png" alt="token">
         <h1 class="token-hero" >
           TOkENOMICS
         </h1>
@@ -248,7 +273,7 @@
               25%
             </p>
           </div>
-
+         
        
 
         </div>
@@ -349,7 +374,7 @@
 
         <div class="teamContentBox">
           <div class="ceoImg">
-            <img src="./images/CEO.png" alt="">
+            <img src="./images/CEO.png" class="teamleader img" alt="">
           </div>
 
           <div class="meetOurTeam">
@@ -546,7 +571,79 @@
   
     </footer>
 
-    
+    <footer class="mob-footer">
+      <div class="footer-mob-container">
+        <ul class="footer-mobile-list-first list">
+          <li class="mobile-list-items">
+            <a href="" class="mobile-items"><img src="./images/mobfooter/Telegrammob.png" alt=""></a>
+          </li>
+          <li class="mobile-list-items">
+            <a href="" class="mobile-items">
+              <img src="./images/mobfooter/Discordmob.png" alt="">
+            </a>
+          </li>
+          <li class="mobile-list-items">
+            <a href="" class="mobile-items">
+              <img src="./images/mobfooter/Mediummob.png" alt="">
+            </a>
+          </li>
+        </div>
+        <ul class="footer-mobile-list-second list">
+                  
+                  <li class="mobile-list-items">
+                    <a href="" class="mobile-items">
+                      <img src="./images/mobfooter/Twittermob.png" alt="">
+                    </a>
+                  </li>
+                  <li class="mobile-list-items">
+                    <a href="" class="mobile-items"> <img src="./images/mobfooter/Linkedinmob.png" alt=""></a>
+                  </li>
+                  <li class="mobile-list-items">
+                    <a href="" class="mobile-items"> <img src="./images/mobfooter/Youtubemob.png" alt=""></a>
+                  </li>
+                </ul>
+              </ul>
+              <div class="mob-footer-logo">
+              <img src="./images/Logo Forms.png" alt="">
+              <img src="./images/Perseus DeFi Syndicate.png" alt="">
+            </div>
+            <p class="footer-mob-private">Privacy Policy</p>
+            <p class="footer-mob-text-second">Cookie Declaretion</p>
+    </footer>
+ 
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li><a href="" class="link">Main page</a></li>
+        <li><a href="" class="link">Blog</a></li>
+        <li><a href="" class="link">Whitepaper</a></li>
+        <li><a href="" class="link">DAO</a></li>
+        <li><a href="" class="link">Contact</a></li>
+      </ul>
+    </div>
+
+    <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="./js/mobile-menu.js"></script>
 
   </body>
 </html>
