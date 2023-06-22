@@ -465,7 +465,7 @@ body {
     width: 740px;
     height: 662px;
     border-radius: 45px;
-    margin-left: 200px;
+    margin-left: 0px;
   }
    {
   }
@@ -1521,15 +1521,15 @@ margin-left: 49px;
 
 @media only screen and (min-width: 1200px) {
   .token-img {
-    width: 1017.23px;
-    height: 1057.55px;
+    width: 606.23px;
+    height: 661.55px;
     position: absolute;
-    top: 0px;
-    right: -10px;
+    top: -313px;
+    right: -197px;
     z-index: -7;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: -351px -673px 0px 1134.77px;
+}
 }
   } {
     
